@@ -1,6 +1,7 @@
 module Vscale
   class Client
-    module Scalets
+    module Scalet
+      
       def all
         get("/scalets")
       end

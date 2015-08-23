@@ -2,16 +2,17 @@ module Vscale
   class Client
     module SshKey
 
-      def keys
+      def all
         get("/sshkeys")
       end
 
-      def add(options = {})
+      def create(options = {})
         post("/sshkeys", options)
       end
 
       def delete(key)
-
+        delete("/sshkeys/#{key}")
+      end
     end
   end
 end

@@ -1,9 +1,7 @@
 require 'httparty'
-require 'vscale/api/version'
-require 'vscale/api/client'
+require 'vscale//version'
+require 'vscale/client'
 
 module Vscale
-  module Api
-    
-  end
+
 end
