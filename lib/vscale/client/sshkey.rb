@@ -6,13 +6,14 @@ module Vscale
         get("/sshkeys")
       end
 
-      def create(options = {})
+      def add(options = {})
         post("/sshkeys", options)
       end
 
-      def delete(key)
+      def destroy(key)
         delete("/sshkeys/#{key}")
       end
+
     end
   end
 end

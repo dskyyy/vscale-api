@@ -18,7 +18,7 @@ module Vscale
         post("/tokens/#{id}", options)
       end
 
-      def delete(id)
+      def destroy(id)
         delete("/tokens/#{id}")
       end
     end

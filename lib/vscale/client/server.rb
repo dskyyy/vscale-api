@@ -1,7 +1,8 @@
 module Vscale
   class Client
-    module Scalet
-      
+    module Server
+
+      # List of all servers
       def all
         get("/scalets")
       end
@@ -26,17 +27,26 @@ module Vscale
         patch("/scalets/#{ctid}/start")
       end
 
+      def rebuild(ctid)
+        patch("/scalets/#{ctid}/rebuild")
+      end
+
       def upgrade(ctid, options = {})
         patch("/scalets/#{ctid}/upgrade", options)
       end
 
-      def delete(ctid)
+      def destroy(ctid)
         delete("/scalets/#{ctid}")
+      end
+
+      def tasks
+        get("/tasks")
       end
 
       def ssh_key(ctid, options = {})
         patch("/sshkeys/scalets/#{ctid}", options)
       end
+
     end
   end
 end

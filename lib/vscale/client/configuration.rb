@@ -9,6 +9,7 @@ module Vscale
       def prices
         get("/billing/prices")
       end
+
     end
   end
 end

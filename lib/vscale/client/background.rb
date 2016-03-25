@@ -9,6 +9,7 @@ module Vscale
       def images
         get("/images")
       end
+
     end
   end
 end
